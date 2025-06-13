@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { error } = require('console');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -180,8 +181,12 @@ const tourPackages = [
     bookingsCount: 420
   }
 ];
-
-// API Routes
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false
+  })
+})
 app.get('/api/destinations', (req, res) => {
   // Simulate API delay
   setTimeout(() => {
