@@ -78,7 +78,7 @@ const Destinations = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/destinations')
+      .get('https://ab-media-project-8xsb.vercel.app/api/destinations')
       .then(res => setDestinations(res.data.data))
       .catch(err => console.error(err));
   }, []);

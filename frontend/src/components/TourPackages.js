@@ -45,7 +45,7 @@ const TourPackages = () => {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/packages/top-selling');
+        const response = await axios.get('https://ab-media-project-8xsb.vercel.app/api/packages/top-selling');
         setPackages(response.data.data);
         setLoading(false);
       } catch (err) {
